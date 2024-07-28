@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9e5e5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('pink.jpg'); 
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.profile {
+    text-align: left; 
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    position: relative;
+    animation: slideUp 1s ease-out;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    animation: rotate 4s linear infinite;
+}
+
+h1 {
+    color: #d65a7c;
+    margin: 0 0 20px 0; 
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top; 
+    transition: background 0.3s;
+}
+
+.table tr:hover td {
+    background: #f1c6c6;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rotate{
+    from { transform: rotate(360deg)}
+    to { transform: rotate(360deg)}
+}
